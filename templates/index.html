@@ -3,26 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Road Safety</title>
+  <title>Road Animation</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <div class="screen">
-    <div class="topbar">
-      <div class="brand">Road Safety Monitor</div>
-      <div id="status" class="status">Ready</div>
-    </div>
-
     <div class="road-area">
       <img class="road" src="{{ url_for('static', filename='road.png') }}" alt="Road background">
       <img class="vehicle" src="{{ url_for('static', filename='bike.gif') }}" alt="Vehicle">
-      <div id="popup" class="popup hidden"></div>
     </div>
   </div>
-
-  <script>
-    window.APP_DATA = {{ data | tojson }};
-  </script>
-  <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
